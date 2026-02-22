@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name | Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>BouncyKnight93</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 <style>
 * {
   margin: 0;
@@ -13,9 +13,9 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: #f1f5f9;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Fira Code', monospace;
   line-height: 1.6;
 }
 
@@ -24,73 +24,59 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  text-align: center;
-  padding: 20px;
+  padding-left: 10%;
+  background: linear-gradient(135deg, #0d1117 60%, #161b22);
 }
 
 header h1 {
   font-size: 3rem;
-  font-weight: 700;
+  color: #58a6ff;
 }
 
-header p {
+header h2 {
   margin-top: 15px;
-  font-size: 1.2rem;
-  max-width: 600px;
+  font-weight: 400;
+  color: #8b949e;
 }
 
-.btn {
-  margin-top: 25px;
-  padding: 12px 28px;
-  border-radius: 30px;
-  background: white;
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #e2e8f0;
+.highlight {
+  color: #f85149;
 }
 
 section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 80px 10%;
+  border-top: 1px solid #21262d;
 }
 
-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
+h3 {
+  color: #58a6ff;
+  margin-bottom: 20px;
 }
 
-.projects {
+.skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 .card {
-  background: #1e293b;
+  background: #161b22;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 10px;
   transition: 0.3s;
+  border: 1px solid #21262d;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  background: #334155;
+  border: 1px solid #58a6ff;
+  transform: translateY(-5px);
 }
 
 footer {
+  padding: 40px 10%;
   text-align: center;
-  padding: 30px;
-  background: #0f172a;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #21262d;
+  color: #8b949e;
 }
 </style>
 </head>
@@ -98,39 +84,61 @@ footer {
 <body>
 
 <header>
-  <h1>Hi, I'm Your Name</h1>
-  <p>I build modern web applications and beautiful user experiences.</p>
-  <a href="#projects" class="btn">View My Work</a>
+  <h1>BouncyKnight93</h1>
+  <h2>Penetration Tester | Learning <span class="highlight">C</span> for Malware Reverse Engineering</h2>
 </header>
 
-<section id="projects">
-  <h2>My Projects</h2>
-  <div class="projects">
+<section>
+  <h3>About Me</h3>
+  <p>
+    I am a penetration tester with a strong interest in low-level systems,
+    exploit development, and malware analysis. Currently expanding my skillset
+    by learning C to better understand memory management, binary internals,
+    and reverse engineering techniques.
+  </p>
+</section>
+
+<section>
+  <h3>Current Focus</h3>
+  <div class="skills">
     <div class="card">
-      <h3>Project One</h3>
-      <p>Short description of your project. What it does and why it's cool.</p>
+      <strong>🔎 Reverse Engineering</strong>
+      <p>Analyzing binaries, understanding assembly, and studying malware behavior.</p>
     </div>
     <div class="card">
-      <h3>Project Two</h3>
-      <p>Short description of your project. What technologies you used.</p>
+      <strong>🧠 C Programming</strong>
+      <p>Memory management, pointers, system calls, and low-level debugging.</p>
     </div>
     <div class="card">
-      <h3>Project Three</h3>
-      <p>Short description of your project. Add GitHub links later.</p>
+      <strong>🛡️ Offensive Security</strong>
+      <p>Web exploitation, privilege escalation, and red team methodologies.</p>
+    </div>
+    <div class="card">
+      <strong>⚙️ Tooling</strong>
+      <p>Working with debuggers, disassemblers, and Linux internals.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>About Me</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    I'm a passionate developer who loves building fast, modern and scalable applications.
-    I enjoy solving problems and learning new technologies.
+  <h3>Goals</h3>
+  <p>
+    My goal is to bridge the gap between high-level penetration testing
+    and low-level exploit development by mastering C and understanding
+    how software vulnerabilities emerge at the memory level.
+  </p>
+</section>
+
+<section>
+  <h3>Contact</h3>
+  <p>
+    GitHub: github.com/yourusername<br>
+    Email: your@email.com
   </p>
 </section>
 
 <footer>
-  <p>© 2026 Your Name | Built with GitHub Pages</p>
+  © 2026 Your Name | Offensive Security & Reverse Engineering
 </footer>
 
 </body>
