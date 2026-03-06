@@ -1,145 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BouncyKnight93</title>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BouncyKnight</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="BouncyKnight Portfolio">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#7dd3fc; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --maxw:1100px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; background:linear-gradient(180deg,#071027 0%, var(--bg) 100%); color:#e6eef8}
+    .wrap{max-width:var(--maxw); margin:40px auto; padding:28px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#04233a;font-weight:700;font-size:18px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
 
-body {
-  background: #0d1117;
-  color: #c9d1d9;
-  font-family: 'Fira Code', monospace;
-  line-height: 1.6;
-}
+    .hero{display:flex;flex-wrap:wrap;gap:18px;margin:28px 0 32px;align-items:center}
+    .intro{flex:1 1 320px}
+    .intro h2{margin:0 0 6px;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .profile{width:160px;border-radius:14px;overflow:hidden;background:var(--glass);padding:6px}
+    .profile img{width:100%;height:auto;display:block}
 
-header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10%;
-  background: linear-gradient(135deg, #0d1117 60%, #161b22);
-}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:16px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+    .card h3{margin:10px 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    .meta{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+    .tag{font-size:12px;color:var(--accent);padding:6px 10px;border-radius:999px;background:rgba(125,211,252,0.06)}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03);font-size:13px;color:var(--muted);text-decoration:none}
 
-header h1 {
-  font-size: 3rem;
-  color: #58a6ff;
-}
+    footer{margin-top:36px;color:var(--muted);font-size:13px;text-align:center}
 
-header h2 {
-  margin-top: 15px;
-  font-weight: 400;
-  color: #8b949e;
-}
-
-.highlight {
-  color: #f85149;
-}
-
-section {
-  padding: 80px 10%;
-  border-top: 1px solid #21262d;
-}
-
-h3 {
-  color: #58a6ff;
-  margin-bottom: 20px;
-}
-
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #161b22;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-  border: 1px solid #21262d;
-}
-
-.card:hover {
-  border: 1px solid #58a6ff;
-  transform: translateY(-5px);
-}
-
-footer {
-  padding: 40px 10%;
-  text-align: center;
-  border-top: 1px solid #21262d;
-  color: #8b949e;
-}
-</style>
+    @media (max-width:600px){.hero{flex-direction:column}.profile{width:100%}}
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">BK</div>
+        <div>
+          <h1>BouncyKnight</h1>
+          <p class="lead">Penetration Tester • SOC Analyst • Security Enthusiast</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-<header>
-  <h1>BouncyKnight93</h1>
-  <h2>Penetration Tester | Learning <span class="highlight">C</span> for Malware Reverse Engineering</h2>
-</header>
+    <section class="hero">
+      <div class="intro">
+        <h2>Projects & Experiments</h2>
+        <p>Here are a few of the things I've done over the last year. Some are interesting, some have a purpose, but most are automation of tasks that I hate doing.</p>
+      </div>
+      <div class="profile">
+        <img src="images/profile.jpg" alt="Profile Photo">
+      </div>
+    </section>
 
-<section>
-  <h3>About Me</h3>
-  <p>
-    I am a penetration tester with a strong interest in low-level systems,
-    exploit development, and malware analysis. Currently expanding my skillset
-    by learning C to better understand memory management, binary internals,
-    and reverse engineering techniques.
-  </p>
-</section>
+    <main id="projects">
+      <div class="grid">
+        <!-- Project card: copy/paste these blocks and edit to add more in future -->
+        <article class="card">
+          <img src="images/project1.jpg" alt="Screenshot or illustration of project">
+          <h3>CVE Lookup</h3>
+          <p>A simple Python script that looks up all related CVE's to an application. Making it easier to lookup known vulnerabilities</p>
+          <div class="meta">
+            <span class="tag">Tooling: Python</span>
+            <a class="btn" href="#">Read more</a>
+          </div>
+        </article>
 
-<section>
-  <h3>Current Focus</h3>
-  <div class="skills">
-    <div class="card">
-      <strong>🔎 Reverse Engineering</strong>
-      <p>Analyzing binaries, understanding assembly, and studying malware behavior.</p>
-    </div>
-    <div class="card">
-      <strong>🧠 C Programming</strong>
-      <p>Memory management, pointers, system calls, and low-level debugging.</p>
-    </div>
-    <div class="card">
-      <strong>🛡️ Offensive Security</strong>
-      <p>Web exploitation, privilege escalation, and red team methodologies.</p>
-    </div>
-    <div class="card">
-      <strong>⚙️ Tooling</strong>
-      <p>Working with debuggers, disassemblers, and Linux internals.</p>
-    </div>
+        <article class="card">
+          <img src="images/project2.jpg" alt="Screenshot or illustration of project">
+          <h3>Different UAC Values</h3>
+          <p>Investigation as to why two different UAC value sets exists and how to analyze it.</p>
+          <div class="meta">
+            <span class="tag">Research</span>
+            <a class="btn" href="#">Read more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/project3.jpg" alt="Screenshot or illustration of project">
+          <h3>XSS Token Theft Without Cookies</h3>
+          <p>Explains how to steal a users authentication token when the web application doesn't use cookies.</p>
+          <div class="meta">
+            <span class="tag">Walkthrough</span>
+            <a class="btn" href="#">Read more</a>
+          </div>
+        </article>
+
+        <!-- Add more project cards as needed -->
+      </div>
+    </main>
+
+    <section id="about" style="margin-top:28px">
+      <div class="card">
+        <h3>About Me</h3>
+        <p style="color:var(--muted)">I am a cybersecurity enthusiast who just loves all it has to offer, everything from writing scripts to how to properly structure a SOC is of interest. Experience from both defensive and offensive has allowed me to become a better cybersecurity professional who enjoys understanding the threats we face today and how to stop them. <br>Currently, I am taking a depper dive into the technical part of cybersecurity with the goal to be able to write and reverse engineer malware.</p>
+      </div>
+    </section>
+
+    <!-- Certifications (separate) -->
+    <section id="certifications" style="margin-top:28px">
+      <div class="grid">
+        <div class="card">
+          <h3>Certifications</h3>
+          <p style="color:var(--muted)">Completed Certifications</p>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:8px">
+            <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+              <img class="cert-badge" src="images/certs/cpts.png" alt="CPTS badge" style="width:140px;height:auto;border-radius:8px;border:1px solid rgba(255,255,255,0.03);padding:6px;background:rgba(255,255,255,0.02)">
+              <figcaption style="color:var(--muted);font-size:13px;margin-top:6px">CPTS — Certified Penetration Testing Specialist<br><span style="font-size:12px;color:var(--muted)">Earned: 2026</span></figcaption>
+            </figure>
+
+            <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+              <img class="cert-badge" src="images/certs/pentestplus.png" alt="CompTIA PenTest+ badge" style="width:140px;height:auto;border-radius:8px;border:1px solid rgba(255,255,255,0.03);padding:6px;background:rgba(255,255,255,0.02)">
+              <figcaption style="color:var(--muted);font-size:13px;margin-top:6px">CompTIA PenTest+<br><span style="font-size:12px;color:var(--muted)">Earned: 2025</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="card">
+          <h3>Currently Working On</h3>
+          <p style="color:var(--muted)">The things I do to not get bored</p>
+          <ul style="color:var(--muted);margin:8px 0 0;padding-left:18px">
+            <li><strong>Project: Dark Web Scanner</strong> — Building a Dark Web Scanner to analyze forums and follow threat actors</li>
+            <li><strong>Studying: C Programming</strong> — Learning C to move into reverse engineering</li>
+            <li><strong>Hobby: Learning Russian</strong> — Gotta do something that doesn't force me to sit infront of a screen all day</li>
+          </ul>
+        </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h3>Contact</h3>
+        <p style="color:var(--muted)">Email: <a href="mailto:chrisse@rastock.com">chrisse@rastock.com</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Personal Portfolio • BouncyKnight • Just Tried Harder</p>
+    </footer>
   </div>
-</section>
-
-<section>
-  <h3>Goals</h3>
-  <p>
-    My goal is to bridge the gap between high-level penetration testing
-    and low-level exploit development by mastering C and understanding
-    how software vulnerabilities emerge at the memory level.
-  </p>
-</section>
-
-<section>
-  <h3>Contact</h3>
-  <p>
-    GitHub: github.com/yourusername<br>
-    Email: your@email.com
-  </p>
-</section>
-
-<footer>
-  © 2026 Your Name | Offensive Security & Reverse Engineering
-</footer>
-
 </body>
 </html>
